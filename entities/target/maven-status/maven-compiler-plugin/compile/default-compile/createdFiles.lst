@@ -1,0 +1,6 @@
+repository\DepartmentRepository.class
+com\progressoft\jpa\entities\DepartmentBean.class
+repository\EntityManagerProvider.class
+repository\DepartmentRepositoryImpl.class
+repository\Main.class
+com\progressoft\jpa\entities\Department.class
