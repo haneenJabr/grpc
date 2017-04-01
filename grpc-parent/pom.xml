@@ -26,11 +26,4 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-    	<dependency>
-    		<groupId>com.progressoft.entities</groupId>
-    		<artifactId>entities</artifactId>
-    		<version>0.0.1-SNAPSHOT</version>
-    	</dependency>
-    </dependencies>
 </project>

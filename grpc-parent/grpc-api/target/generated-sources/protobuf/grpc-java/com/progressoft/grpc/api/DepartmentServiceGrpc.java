@@ -22,7 +22,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 0.14.0)",
-    comments = "Source: department.proto")
+    comments = "Source: departments.proto")
 public class DepartmentServiceGrpc {
 
   private DepartmentServiceGrpc() {}
@@ -32,40 +32,13 @@ public class DepartmentServiceGrpc {
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi
   public static final io.grpc.MethodDescriptor<com.progressoft.grpc.api.DepartmentRequest,
-      com.progressoft.grpc.api.DepartmentReply> METHOD_INSERT =
+      com.progressoft.grpc.api.DepartmentReply> METHOD_DEPARTMENT_REQUEST_HANDLER =
       io.grpc.MethodDescriptor.create(
           io.grpc.MethodDescriptor.MethodType.UNARY,
           generateFullMethodName(
-              "com.progressoft.grpc.api.DepartmentService", "insert"),
+              "com.progressoft.grpc.api.DepartmentService", "departmentRequestHandler"),
           io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.DepartmentRequest.getDefaultInstance()),
           io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.DepartmentReply.getDefaultInstance()));
-  @io.grpc.ExperimentalApi
-  public static final io.grpc.MethodDescriptor<com.progressoft.grpc.api.DeleteDepartmentRequest,
-      com.progressoft.grpc.api.DepartmentReply> METHOD_DELETE =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "com.progressoft.grpc.api.DepartmentService", "delete"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.DeleteDepartmentRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.DepartmentReply.getDefaultInstance()));
-  @io.grpc.ExperimentalApi
-  public static final io.grpc.MethodDescriptor<com.progressoft.grpc.api.DepartmentRequest,
-      com.progressoft.grpc.api.DepartmentReply> METHOD_UPDATE =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "com.progressoft.grpc.api.DepartmentService", "update"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.DepartmentRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.DepartmentReply.getDefaultInstance()));
-  @io.grpc.ExperimentalApi
-  public static final io.grpc.MethodDescriptor<com.progressoft.grpc.api.EmptyRequest,
-      com.progressoft.grpc.api.AllDepartmentsReply> METHOD_SELECT =
-      io.grpc.MethodDescriptor.create(
-          io.grpc.MethodDescriptor.MethodType.UNARY,
-          generateFullMethodName(
-              "com.progressoft.grpc.api.DepartmentService", "select"),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.EmptyRequest.getDefaultInstance()),
-          io.grpc.protobuf.ProtoUtils.marshaller(com.progressoft.grpc.api.AllDepartmentsReply.getDefaultInstance()));
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -102,50 +75,17 @@ public class DepartmentServiceGrpc {
      * insert a department
      * </pre>
      */
-    public void insert(com.progressoft.grpc.api.DepartmentRequest request,
+    public void departmentRequestHandler(com.progressoft.grpc.api.DepartmentRequest request,
         io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver);
-
-    /**
-     */
-    public void delete(com.progressoft.grpc.api.DeleteDepartmentRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver);
-
-    /**
-     */
-    public void update(com.progressoft.grpc.api.DepartmentRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver);
-
-    /**
-     */
-    public void select(com.progressoft.grpc.api.EmptyRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.AllDepartmentsReply> responseObserver);
   }
 
   @io.grpc.ExperimentalApi
   public static abstract class AbstractDepartmentService implements DepartmentService, io.grpc.BindableService {
 
     @java.lang.Override
-    public void insert(com.progressoft.grpc.api.DepartmentRequest request,
+    public void departmentRequestHandler(com.progressoft.grpc.api.DepartmentRequest request,
         io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_INSERT, responseObserver);
-    }
-
-    @java.lang.Override
-    public void delete(com.progressoft.grpc.api.DeleteDepartmentRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_DELETE, responseObserver);
-    }
-
-    @java.lang.Override
-    public void update(com.progressoft.grpc.api.DepartmentRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_UPDATE, responseObserver);
-    }
-
-    @java.lang.Override
-    public void select(com.progressoft.grpc.api.EmptyRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.AllDepartmentsReply> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SELECT, responseObserver);
+      asyncUnimplementedUnaryCall(METHOD_DEPARTMENT_REQUEST_HANDLER, responseObserver);
     }
 
     @java.lang.Override public io.grpc.ServerServiceDefinition bindService() {
@@ -165,19 +105,7 @@ public class DepartmentServiceGrpc {
      * insert a department
      * </pre>
      */
-    public com.progressoft.grpc.api.DepartmentReply insert(com.progressoft.grpc.api.DepartmentRequest request);
-
-    /**
-     */
-    public com.progressoft.grpc.api.DepartmentReply delete(com.progressoft.grpc.api.DeleteDepartmentRequest request);
-
-    /**
-     */
-    public com.progressoft.grpc.api.DepartmentReply update(com.progressoft.grpc.api.DepartmentRequest request);
-
-    /**
-     */
-    public com.progressoft.grpc.api.AllDepartmentsReply select(com.progressoft.grpc.api.EmptyRequest request);
+    public com.progressoft.grpc.api.DepartmentReply departmentRequestHandler(com.progressoft.grpc.api.DepartmentRequest request);
   }
 
   /**
@@ -192,23 +120,8 @@ public class DepartmentServiceGrpc {
      * insert a department
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> insert(
+    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> departmentRequestHandler(
         com.progressoft.grpc.api.DepartmentRequest request);
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> delete(
-        com.progressoft.grpc.api.DeleteDepartmentRequest request);
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> update(
-        com.progressoft.grpc.api.DepartmentRequest request);
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.AllDepartmentsReply> select(
-        com.progressoft.grpc.api.EmptyRequest request);
   }
 
   public static class DepartmentServiceStub extends io.grpc.stub.AbstractStub<DepartmentServiceStub>
@@ -229,31 +142,10 @@ public class DepartmentServiceGrpc {
     }
 
     @java.lang.Override
-    public void insert(com.progressoft.grpc.api.DepartmentRequest request,
+    public void departmentRequestHandler(com.progressoft.grpc.api.DepartmentRequest request,
         io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_INSERT, getCallOptions()), request, responseObserver);
-    }
-
-    @java.lang.Override
-    public void delete(com.progressoft.grpc.api.DeleteDepartmentRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(METHOD_DELETE, getCallOptions()), request, responseObserver);
-    }
-
-    @java.lang.Override
-    public void update(com.progressoft.grpc.api.DepartmentRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(METHOD_UPDATE, getCallOptions()), request, responseObserver);
-    }
-
-    @java.lang.Override
-    public void select(com.progressoft.grpc.api.EmptyRequest request,
-        io.grpc.stub.StreamObserver<com.progressoft.grpc.api.AllDepartmentsReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(METHOD_SELECT, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_DEPARTMENT_REQUEST_HANDLER, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -275,27 +167,9 @@ public class DepartmentServiceGrpc {
     }
 
     @java.lang.Override
-    public com.progressoft.grpc.api.DepartmentReply insert(com.progressoft.grpc.api.DepartmentRequest request) {
+    public com.progressoft.grpc.api.DepartmentReply departmentRequestHandler(com.progressoft.grpc.api.DepartmentRequest request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_INSERT, getCallOptions(), request);
-    }
-
-    @java.lang.Override
-    public com.progressoft.grpc.api.DepartmentReply delete(com.progressoft.grpc.api.DeleteDepartmentRequest request) {
-      return blockingUnaryCall(
-          getChannel(), METHOD_DELETE, getCallOptions(), request);
-    }
-
-    @java.lang.Override
-    public com.progressoft.grpc.api.DepartmentReply update(com.progressoft.grpc.api.DepartmentRequest request) {
-      return blockingUnaryCall(
-          getChannel(), METHOD_UPDATE, getCallOptions(), request);
-    }
-
-    @java.lang.Override
-    public com.progressoft.grpc.api.AllDepartmentsReply select(com.progressoft.grpc.api.EmptyRequest request) {
-      return blockingUnaryCall(
-          getChannel(), METHOD_SELECT, getCallOptions(), request);
+          getChannel(), METHOD_DEPARTMENT_REQUEST_HANDLER, getCallOptions(), request);
     }
   }
 
@@ -317,38 +191,14 @@ public class DepartmentServiceGrpc {
     }
 
     @java.lang.Override
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> insert(
+    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> departmentRequestHandler(
         com.progressoft.grpc.api.DepartmentRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_INSERT, getCallOptions()), request);
-    }
-
-    @java.lang.Override
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> delete(
-        com.progressoft.grpc.api.DeleteDepartmentRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(METHOD_DELETE, getCallOptions()), request);
-    }
-
-    @java.lang.Override
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.DepartmentReply> update(
-        com.progressoft.grpc.api.DepartmentRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(METHOD_UPDATE, getCallOptions()), request);
-    }
-
-    @java.lang.Override
-    public com.google.common.util.concurrent.ListenableFuture<com.progressoft.grpc.api.AllDepartmentsReply> select(
-        com.progressoft.grpc.api.EmptyRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(METHOD_SELECT, getCallOptions()), request);
+          getChannel().newCall(METHOD_DEPARTMENT_REQUEST_HANDLER, getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_INSERT = 0;
-  private static final int METHODID_DELETE = 1;
-  private static final int METHODID_UPDATE = 2;
-  private static final int METHODID_SELECT = 3;
+  private static final int METHODID_DEPARTMENT_REQUEST_HANDLER = 0;
 
   private static class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -367,21 +217,9 @@ public class DepartmentServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_INSERT:
-          serviceImpl.insert((com.progressoft.grpc.api.DepartmentRequest) request,
+        case METHODID_DEPARTMENT_REQUEST_HANDLER:
+          serviceImpl.departmentRequestHandler((com.progressoft.grpc.api.DepartmentRequest) request,
               (io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply>) responseObserver);
-          break;
-        case METHODID_DELETE:
-          serviceImpl.delete((com.progressoft.grpc.api.DeleteDepartmentRequest) request,
-              (io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply>) responseObserver);
-          break;
-        case METHODID_UPDATE:
-          serviceImpl.update((com.progressoft.grpc.api.DepartmentRequest) request,
-              (io.grpc.stub.StreamObserver<com.progressoft.grpc.api.DepartmentReply>) responseObserver);
-          break;
-        case METHODID_SELECT:
-          serviceImpl.select((com.progressoft.grpc.api.EmptyRequest) request,
-              (io.grpc.stub.StreamObserver<com.progressoft.grpc.api.AllDepartmentsReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -403,33 +241,12 @@ public class DepartmentServiceGrpc {
       final DepartmentService serviceImpl) {
     return io.grpc.ServerServiceDefinition.builder(SERVICE_NAME)
         .addMethod(
-          METHOD_INSERT,
+          METHOD_DEPARTMENT_REQUEST_HANDLER,
           asyncUnaryCall(
             new MethodHandlers<
               com.progressoft.grpc.api.DepartmentRequest,
               com.progressoft.grpc.api.DepartmentReply>(
-                serviceImpl, METHODID_INSERT)))
-        .addMethod(
-          METHOD_DELETE,
-          asyncUnaryCall(
-            new MethodHandlers<
-              com.progressoft.grpc.api.DeleteDepartmentRequest,
-              com.progressoft.grpc.api.DepartmentReply>(
-                serviceImpl, METHODID_DELETE)))
-        .addMethod(
-          METHOD_UPDATE,
-          asyncUnaryCall(
-            new MethodHandlers<
-              com.progressoft.grpc.api.DepartmentRequest,
-              com.progressoft.grpc.api.DepartmentReply>(
-                serviceImpl, METHODID_UPDATE)))
-        .addMethod(
-          METHOD_SELECT,
-          asyncUnaryCall(
-            new MethodHandlers<
-              com.progressoft.grpc.api.EmptyRequest,
-              com.progressoft.grpc.api.AllDepartmentsReply>(
-                serviceImpl, METHODID_SELECT)))
+                serviceImpl, METHODID_DEPARTMENT_REQUEST_HANDLER)))
         .build();
   }
 }

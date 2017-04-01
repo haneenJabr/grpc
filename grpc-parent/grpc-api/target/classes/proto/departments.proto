@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_outer_classname = "Departments";
+
+package com.progressoft.grpc.api;
+
+
+// The greeting service definition.
+service DepartmentService {
+  // insert a department
+  rpc departmentRequestHandler (DepartmentRequest) returns (DepartmentReply) {}
+
+}
+
+// The request message containing the departments.
+message DepartmentRequest {
+repeated Department departments=1;
+
+message Department {
+string id=1;
+string name=2;
+}
+
+ }
+
+// The response message containing the insertion message
+message DepartmentReply {
+  string message = 1;
+}
+
+
+
+

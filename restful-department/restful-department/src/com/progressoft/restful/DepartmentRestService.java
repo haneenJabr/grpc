@@ -3,20 +3,13 @@ package com.progressoft.restful;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.progressoft.jpa.entities.Department;
-
-import repository.DepartmentRepository;
-import repository.DepartmentRepositoryImpl;
 
 /**
  * @author u538
@@ -24,43 +17,12 @@ import repository.DepartmentRepositoryImpl;
  */
 @Path("/department")
 public class DepartmentRestService {
-	private DepartmentRepository repository = new DepartmentRepositoryImpl();
-
-	@GET
-	@Path("{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Department getDepartmentInfoAsJson(@PathParam("id") String id) {
-		return repository.get(id);
-	}
-
+	
 	@POST
 	@Path("/post")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response insertDepartmentInfoAsJson(Department department) {
-		repository.add(department);
-		return Response.status(201).entity(department).build();
+	public Response postDepartment(List<Department> departments) {
+		return Response.status(201).build();
 	}
-
-	@PUT
-	@Path("/update")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Response updateDepartment(Department department) {
-		repository.update(department);
-		return Response.status(201).entity(department).build();
-	}
-
-	@DELETE
-	@Path("/delete/{deptId}")
-	public void deleteDepartment(@PathParam("deptId") String deptId) {
-		repository.delete(deptId);
-	}
-
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public List<Department> listAllDepartment() {
-		return repository.listAllDepartments();
-	}
-
 }
