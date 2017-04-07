@@ -22,7 +22,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/future plans/Downloads/javax.ws.rs-api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="E:/future plans/Downloads/json-20151123.jar"/>
+	<classpathentry kind="lib" path="E:/files to move/future plans/Downloads/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="E:/files to move/future plans/Downloads/json-20151123.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

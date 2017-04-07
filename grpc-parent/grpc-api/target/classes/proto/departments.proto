@@ -10,24 +10,35 @@ package com.progressoft.grpc.api;
 service DepartmentService {
   // insert a department
   rpc departmentRequestHandler (DepartmentRequest) returns (DepartmentReply) {}
-
 }
 
-// The request message containing the departments.
-message DepartmentRequest {
-repeated Department departments=1;
 
 message Department {
 string id=1;
 string name=2;
+string description=3;
+repeated Employee employees=4;
 }
 
+message Employee{
+int32  employeeId=1;
+string employeeName=2;
+int32  phone=3;
+string birthDate=4;
+}
+
+
+// The request message containing the departments.
+message DepartmentRequest {
+repeated Department departments=1;
  }
 
 // The response message containing the insertion message
 message DepartmentReply {
   string message = 1;
-}
+  repeated Department departments=2;
+ }
+
 
 
 

@@ -20,6 +20,7 @@ public  final class DepartmentReply extends
   }
   private DepartmentReply() {
     message_ = "";
+    departments_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -52,6 +53,14 @@ public  final class DepartmentReply extends
             message_ = s;
             break;
           }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              departments_ = new java.util.ArrayList<com.progressoft.grpc.api.Department>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            departments_.add(input.readMessage(com.progressoft.grpc.api.Department.parser(), extensionRegistry));
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -61,6 +70,9 @@ public  final class DepartmentReply extends
           new com.google.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this));
     } finally {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        departments_ = java.util.Collections.unmodifiableList(departments_);
+      }
       makeExtensionsImmutable();
     }
   }
@@ -76,6 +88,7 @@ public  final class DepartmentReply extends
             com.progressoft.grpc.api.DepartmentReply.class, com.progressoft.grpc.api.DepartmentReply.Builder.class);
   }
 
+  private int bitField0_;
   public static final int MESSAGE_FIELD_NUMBER = 1;
   private volatile java.lang.Object message_;
   /**
@@ -110,6 +123,41 @@ public  final class DepartmentReply extends
     }
   }
 
+  public static final int DEPARTMENTS_FIELD_NUMBER = 2;
+  private java.util.List<com.progressoft.grpc.api.Department> departments_;
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  public java.util.List<com.progressoft.grpc.api.Department> getDepartmentsList() {
+    return departments_;
+  }
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  public java.util.List<? extends com.progressoft.grpc.api.DepartmentOrBuilder> 
+      getDepartmentsOrBuilderList() {
+    return departments_;
+  }
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  public int getDepartmentsCount() {
+    return departments_.size();
+  }
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  public com.progressoft.grpc.api.Department getDepartments(int index) {
+    return departments_.get(index);
+  }
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  public com.progressoft.grpc.api.DepartmentOrBuilder getDepartmentsOrBuilder(
+      int index) {
+    return departments_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -125,6 +173,9 @@ public  final class DepartmentReply extends
     if (!getMessageBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, message_);
     }
+    for (int i = 0; i < departments_.size(); i++) {
+      output.writeMessage(2, departments_.get(i));
+    }
   }
 
   public int getSerializedSize() {
@@ -134,6 +185,10 @@ public  final class DepartmentReply extends
     size = 0;
     if (!getMessageBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, message_);
+    }
+    for (int i = 0; i < departments_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, departments_.get(i));
     }
     memoizedSize = size;
     return size;
@@ -246,12 +301,19 @@ public  final class DepartmentReply extends
     }
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        getDepartmentsFieldBuilder();
       }
     }
     public Builder clear() {
       super.clear();
       message_ = "";
 
+      if (departmentsBuilder_ == null) {
+        departments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      } else {
+        departmentsBuilder_.clear();
+      }
       return this;
     }
 
@@ -274,7 +336,19 @@ public  final class DepartmentReply extends
 
     public com.progressoft.grpc.api.DepartmentReply buildPartial() {
       com.progressoft.grpc.api.DepartmentReply result = new com.progressoft.grpc.api.DepartmentReply(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.message_ = message_;
+      if (departmentsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          departments_ = java.util.Collections.unmodifiableList(departments_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.departments_ = departments_;
+      } else {
+        result.departments_ = departmentsBuilder_.build();
+      }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -293,6 +367,32 @@ public  final class DepartmentReply extends
       if (!other.getMessage().isEmpty()) {
         message_ = other.message_;
         onChanged();
+      }
+      if (departmentsBuilder_ == null) {
+        if (!other.departments_.isEmpty()) {
+          if (departments_.isEmpty()) {
+            departments_ = other.departments_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureDepartmentsIsMutable();
+            departments_.addAll(other.departments_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.departments_.isEmpty()) {
+          if (departmentsBuilder_.isEmpty()) {
+            departmentsBuilder_.dispose();
+            departmentsBuilder_ = null;
+            departments_ = other.departments_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            departmentsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getDepartmentsFieldBuilder() : null;
+          } else {
+            departmentsBuilder_.addAllMessages(other.departments_);
+          }
+        }
       }
       onChanged();
       return this;
@@ -319,6 +419,7 @@ public  final class DepartmentReply extends
       }
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object message_ = "";
     /**
@@ -387,6 +488,246 @@ public  final class DepartmentReply extends
       message_ = value;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.progressoft.grpc.api.Department> departments_ =
+      java.util.Collections.emptyList();
+    private void ensureDepartmentsIsMutable() {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        departments_ = new java.util.ArrayList<com.progressoft.grpc.api.Department>(departments_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.progressoft.grpc.api.Department, com.progressoft.grpc.api.Department.Builder, com.progressoft.grpc.api.DepartmentOrBuilder> departmentsBuilder_;
+
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public java.util.List<com.progressoft.grpc.api.Department> getDepartmentsList() {
+      if (departmentsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(departments_);
+      } else {
+        return departmentsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public int getDepartmentsCount() {
+      if (departmentsBuilder_ == null) {
+        return departments_.size();
+      } else {
+        return departmentsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public com.progressoft.grpc.api.Department getDepartments(int index) {
+      if (departmentsBuilder_ == null) {
+        return departments_.get(index);
+      } else {
+        return departmentsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder setDepartments(
+        int index, com.progressoft.grpc.api.Department value) {
+      if (departmentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDepartmentsIsMutable();
+        departments_.set(index, value);
+        onChanged();
+      } else {
+        departmentsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder setDepartments(
+        int index, com.progressoft.grpc.api.Department.Builder builderForValue) {
+      if (departmentsBuilder_ == null) {
+        ensureDepartmentsIsMutable();
+        departments_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        departmentsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder addDepartments(com.progressoft.grpc.api.Department value) {
+      if (departmentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDepartmentsIsMutable();
+        departments_.add(value);
+        onChanged();
+      } else {
+        departmentsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder addDepartments(
+        int index, com.progressoft.grpc.api.Department value) {
+      if (departmentsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDepartmentsIsMutable();
+        departments_.add(index, value);
+        onChanged();
+      } else {
+        departmentsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder addDepartments(
+        com.progressoft.grpc.api.Department.Builder builderForValue) {
+      if (departmentsBuilder_ == null) {
+        ensureDepartmentsIsMutable();
+        departments_.add(builderForValue.build());
+        onChanged();
+      } else {
+        departmentsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder addDepartments(
+        int index, com.progressoft.grpc.api.Department.Builder builderForValue) {
+      if (departmentsBuilder_ == null) {
+        ensureDepartmentsIsMutable();
+        departments_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        departmentsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder addAllDepartments(
+        java.lang.Iterable<? extends com.progressoft.grpc.api.Department> values) {
+      if (departmentsBuilder_ == null) {
+        ensureDepartmentsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, departments_);
+        onChanged();
+      } else {
+        departmentsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder clearDepartments() {
+      if (departmentsBuilder_ == null) {
+        departments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        departmentsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public Builder removeDepartments(int index) {
+      if (departmentsBuilder_ == null) {
+        ensureDepartmentsIsMutable();
+        departments_.remove(index);
+        onChanged();
+      } else {
+        departmentsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public com.progressoft.grpc.api.Department.Builder getDepartmentsBuilder(
+        int index) {
+      return getDepartmentsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public com.progressoft.grpc.api.DepartmentOrBuilder getDepartmentsOrBuilder(
+        int index) {
+      if (departmentsBuilder_ == null) {
+        return departments_.get(index);  } else {
+        return departmentsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public java.util.List<? extends com.progressoft.grpc.api.DepartmentOrBuilder> 
+         getDepartmentsOrBuilderList() {
+      if (departmentsBuilder_ != null) {
+        return departmentsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(departments_);
+      }
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public com.progressoft.grpc.api.Department.Builder addDepartmentsBuilder() {
+      return getDepartmentsFieldBuilder().addBuilder(
+          com.progressoft.grpc.api.Department.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public com.progressoft.grpc.api.Department.Builder addDepartmentsBuilder(
+        int index) {
+      return getDepartmentsFieldBuilder().addBuilder(
+          index, com.progressoft.grpc.api.Department.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+     */
+    public java.util.List<com.progressoft.grpc.api.Department.Builder> 
+         getDepartmentsBuilderList() {
+      return getDepartmentsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        com.progressoft.grpc.api.Department, com.progressoft.grpc.api.Department.Builder, com.progressoft.grpc.api.DepartmentOrBuilder> 
+        getDepartmentsFieldBuilder() {
+      if (departmentsBuilder_ == null) {
+        departmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            com.progressoft.grpc.api.Department, com.progressoft.grpc.api.Department.Builder, com.progressoft.grpc.api.DepartmentOrBuilder>(
+                departments_,
+                ((bitField0_ & 0x00000002) == 0x00000002),
+                getParentForChildren(),
+                isClean());
+        departments_ = null;
+      }
+      return departmentsBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

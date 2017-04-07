@@ -9,15 +9,20 @@ public final class Departments {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_progressoft_grpc_api_Department_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_progressoft_grpc_api_Department_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_progressoft_grpc_api_Employee_descriptor;
+  static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_progressoft_grpc_api_Employee_fieldAccessorTable;
+  static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_progressoft_grpc_api_DepartmentRequest_descriptor;
   static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_progressoft_grpc_api_DepartmentRequest_fieldAccessorTable;
-  static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_descriptor;
-  static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_fieldAccessorTable;
   static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_progressoft_grpc_api_DepartmentReply_descriptor;
   static
@@ -33,15 +38,20 @@ public final class Departments {
   static {
     java.lang.String[] descriptorData = {
       "\n\021departments.proto\022\030com.progressoft.grp" +
-      "c.api\"\210\001\n\021DepartmentRequest\022K\n\013departmen" +
-      "ts\030\001 \003(\01326.com.progressoft.grpc.api.Depa" +
-      "rtmentRequest.Department\032&\n\nDepartment\022\n" +
-      "\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\"\"\n\017DepartmentRe" +
-      "ply\022\017\n\007message\030\001 \001(\t2\211\001\n\021DepartmentServi" +
-      "ce\022t\n\030departmentRequestHandler\022+.com.pro" +
-      "gressoft.grpc.api.DepartmentRequest\032).co" +
-      "m.progressoft.grpc.api.DepartmentReply\"\000" +
-      "B\017B\013DepartmentsP\001b\006proto3"
+      "c.api\"r\n\nDepartment\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\0225\n\temployees\030" +
+      "\004 \003(\0132\".com.progressoft.grpc.api.Employe" +
+      "e\"V\n\010Employee\022\022\n\nemployeeId\030\001 \001(\005\022\024\n\014emp" +
+      "loyeeName\030\002 \001(\t\022\r\n\005phone\030\003 \001(\005\022\021\n\tbirthD" +
+      "ate\030\004 \001(\t\"N\n\021DepartmentRequest\0229\n\013depart" +
+      "ments\030\001 \003(\0132$.com.progressoft.grpc.api.D" +
+      "epartment\"]\n\017DepartmentReply\022\017\n\007message\030" +
+      "\001 \001(\t\0229\n\013departments\030\002 \003(\0132$.com.progres",
+      "soft.grpc.api.Department2\211\001\n\021DepartmentS" +
+      "ervice\022t\n\030departmentRequestHandler\022+.com" +
+      ".progressoft.grpc.api.DepartmentRequest\032" +
+      ").com.progressoft.grpc.api.DepartmentRep" +
+      "ly\"\000B\017B\013DepartmentsP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,24 +65,30 @@ public final class Departments {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_progressoft_grpc_api_DepartmentRequest_descriptor =
+    internal_static_com_progressoft_grpc_api_Department_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_progressoft_grpc_api_Department_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_progressoft_grpc_api_Department_descriptor,
+        new java.lang.String[] { "Id", "Name", "Description", "Employees", });
+    internal_static_com_progressoft_grpc_api_Employee_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_com_progressoft_grpc_api_Employee_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_progressoft_grpc_api_Employee_descriptor,
+        new java.lang.String[] { "EmployeeId", "EmployeeName", "Phone", "BirthDate", });
+    internal_static_com_progressoft_grpc_api_DepartmentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_progressoft_grpc_api_DepartmentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_progressoft_grpc_api_DepartmentRequest_descriptor,
         new java.lang.String[] { "Departments", });
-    internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_descriptor =
-      internal_static_com_progressoft_grpc_api_DepartmentRequest_descriptor.getNestedTypes().get(0);
-    internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_descriptor,
-        new java.lang.String[] { "Id", "Name", });
     internal_static_com_progressoft_grpc_api_DepartmentReply_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_com_progressoft_grpc_api_DepartmentReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_progressoft_grpc_api_DepartmentReply_descriptor,
-        new java.lang.String[] { "Message", });
+        new java.lang.String[] { "Message", "Departments", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

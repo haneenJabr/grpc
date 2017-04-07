@@ -48,10 +48,10 @@ public  final class DepartmentRequest extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              departments_ = new java.util.ArrayList<com.progressoft.grpc.api.DepartmentRequest.Department>();
+              departments_ = new java.util.ArrayList<com.progressoft.grpc.api.Department>();
               mutable_bitField0_ |= 0x00000001;
             }
-            departments_.add(input.readMessage(com.progressoft.grpc.api.DepartmentRequest.Department.parser(), extensionRegistry));
+            departments_.add(input.readMessage(com.progressoft.grpc.api.Department.parser(), extensionRegistry));
             break;
           }
         }
@@ -81,619 +81,37 @@ public  final class DepartmentRequest extends
             com.progressoft.grpc.api.DepartmentRequest.class, com.progressoft.grpc.api.DepartmentRequest.Builder.class);
   }
 
-  public interface DepartmentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.progressoft.grpc.api.DepartmentRequest.Department)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>optional string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>optional string name = 2;</code>
-     */
-    java.lang.String getName();
-    /**
-     * <code>optional string name = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-  }
-  /**
-   * Protobuf type {@code com.progressoft.grpc.api.DepartmentRequest.Department}
-   */
-  public  static final class Department extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.progressoft.grpc.api.DepartmentRequest.Department)
-      DepartmentOrBuilder {
-    // Use Department.newBuilder() to construct.
-    private Department(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private Department() {
-      id_ = "";
-      name_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private Department(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.progressoft.grpc.api.Departments.internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.progressoft.grpc.api.Departments.internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.progressoft.grpc.api.DepartmentRequest.Department.class, com.progressoft.grpc.api.DepartmentRequest.Department.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>optional string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>optional string name = 2;</code>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>optional string name = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 2, name_);
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, name_);
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.progressoft.grpc.api.DepartmentRequest.Department parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.progressoft.grpc.api.DepartmentRequest.Department prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.progressoft.grpc.api.DepartmentRequest.Department}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.progressoft.grpc.api.DepartmentRequest.Department)
-        com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.progressoft.grpc.api.Departments.internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.progressoft.grpc.api.Departments.internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.progressoft.grpc.api.DepartmentRequest.Department.class, com.progressoft.grpc.api.DepartmentRequest.Department.Builder.class);
-      }
-
-      // Construct using com.progressoft.grpc.api.DepartmentRequest.Department.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        name_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.progressoft.grpc.api.Departments.internal_static_com_progressoft_grpc_api_DepartmentRequest_Department_descriptor;
-      }
-
-      public com.progressoft.grpc.api.DepartmentRequest.Department getDefaultInstanceForType() {
-        return com.progressoft.grpc.api.DepartmentRequest.Department.getDefaultInstance();
-      }
-
-      public com.progressoft.grpc.api.DepartmentRequest.Department build() {
-        com.progressoft.grpc.api.DepartmentRequest.Department result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.progressoft.grpc.api.DepartmentRequest.Department buildPartial() {
-        com.progressoft.grpc.api.DepartmentRequest.Department result = new com.progressoft.grpc.api.DepartmentRequest.Department(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.progressoft.grpc.api.DepartmentRequest.Department) {
-          return mergeFrom((com.progressoft.grpc.api.DepartmentRequest.Department)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.progressoft.grpc.api.DepartmentRequest.Department other) {
-        if (other == com.progressoft.grpc.api.DepartmentRequest.Department.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.progressoft.grpc.api.DepartmentRequest.Department parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.progressoft.grpc.api.DepartmentRequest.Department) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>optional string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>optional string name = 2;</code>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional string name = 2;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.progressoft.grpc.api.DepartmentRequest.Department)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.progressoft.grpc.api.DepartmentRequest.Department)
-    private static final com.progressoft.grpc.api.DepartmentRequest.Department DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.progressoft.grpc.api.DepartmentRequest.Department();
-    }
-
-    public static com.progressoft.grpc.api.DepartmentRequest.Department getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Department>
-        PARSER = new com.google.protobuf.AbstractParser<Department>() {
-      public Department parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new Department(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<Department> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Department> getParserForType() {
-      return PARSER;
-    }
-
-    public com.progressoft.grpc.api.DepartmentRequest.Department getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public static final int DEPARTMENTS_FIELD_NUMBER = 1;
-  private java.util.List<com.progressoft.grpc.api.DepartmentRequest.Department> departments_;
+  private java.util.List<com.progressoft.grpc.api.Department> departments_;
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  public java.util.List<com.progressoft.grpc.api.DepartmentRequest.Department> getDepartmentsList() {
+  public java.util.List<com.progressoft.grpc.api.Department> getDepartmentsList() {
     return departments_;
   }
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  public java.util.List<? extends com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder> 
+  public java.util.List<? extends com.progressoft.grpc.api.DepartmentOrBuilder> 
       getDepartmentsOrBuilderList() {
     return departments_;
   }
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
   public int getDepartmentsCount() {
     return departments_.size();
   }
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  public com.progressoft.grpc.api.DepartmentRequest.Department getDepartments(int index) {
+  public com.progressoft.grpc.api.Department getDepartments(int index) {
     return departments_.get(index);
   }
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  public com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder getDepartmentsOrBuilder(
+  public com.progressoft.grpc.api.DepartmentOrBuilder getDepartmentsOrBuilder(
       int index) {
     return departments_.get(index);
   }
@@ -946,22 +364,22 @@ public  final class DepartmentRequest extends
     }
     private int bitField0_;
 
-    private java.util.List<com.progressoft.grpc.api.DepartmentRequest.Department> departments_ =
+    private java.util.List<com.progressoft.grpc.api.Department> departments_ =
       java.util.Collections.emptyList();
     private void ensureDepartmentsIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        departments_ = new java.util.ArrayList<com.progressoft.grpc.api.DepartmentRequest.Department>(departments_);
+        departments_ = new java.util.ArrayList<com.progressoft.grpc.api.Department>(departments_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.progressoft.grpc.api.DepartmentRequest.Department, com.progressoft.grpc.api.DepartmentRequest.Department.Builder, com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder> departmentsBuilder_;
+        com.progressoft.grpc.api.Department, com.progressoft.grpc.api.Department.Builder, com.progressoft.grpc.api.DepartmentOrBuilder> departmentsBuilder_;
 
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public java.util.List<com.progressoft.grpc.api.DepartmentRequest.Department> getDepartmentsList() {
+    public java.util.List<com.progressoft.grpc.api.Department> getDepartmentsList() {
       if (departmentsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(departments_);
       } else {
@@ -969,7 +387,7 @@ public  final class DepartmentRequest extends
       }
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public int getDepartmentsCount() {
       if (departmentsBuilder_ == null) {
@@ -979,9 +397,9 @@ public  final class DepartmentRequest extends
       }
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public com.progressoft.grpc.api.DepartmentRequest.Department getDepartments(int index) {
+    public com.progressoft.grpc.api.Department getDepartments(int index) {
       if (departmentsBuilder_ == null) {
         return departments_.get(index);
       } else {
@@ -989,10 +407,10 @@ public  final class DepartmentRequest extends
       }
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder setDepartments(
-        int index, com.progressoft.grpc.api.DepartmentRequest.Department value) {
+        int index, com.progressoft.grpc.api.Department value) {
       if (departmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1006,10 +424,10 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder setDepartments(
-        int index, com.progressoft.grpc.api.DepartmentRequest.Department.Builder builderForValue) {
+        int index, com.progressoft.grpc.api.Department.Builder builderForValue) {
       if (departmentsBuilder_ == null) {
         ensureDepartmentsIsMutable();
         departments_.set(index, builderForValue.build());
@@ -1020,9 +438,9 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public Builder addDepartments(com.progressoft.grpc.api.DepartmentRequest.Department value) {
+    public Builder addDepartments(com.progressoft.grpc.api.Department value) {
       if (departmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1036,10 +454,10 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder addDepartments(
-        int index, com.progressoft.grpc.api.DepartmentRequest.Department value) {
+        int index, com.progressoft.grpc.api.Department value) {
       if (departmentsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1053,10 +471,10 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder addDepartments(
-        com.progressoft.grpc.api.DepartmentRequest.Department.Builder builderForValue) {
+        com.progressoft.grpc.api.Department.Builder builderForValue) {
       if (departmentsBuilder_ == null) {
         ensureDepartmentsIsMutable();
         departments_.add(builderForValue.build());
@@ -1067,10 +485,10 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder addDepartments(
-        int index, com.progressoft.grpc.api.DepartmentRequest.Department.Builder builderForValue) {
+        int index, com.progressoft.grpc.api.Department.Builder builderForValue) {
       if (departmentsBuilder_ == null) {
         ensureDepartmentsIsMutable();
         departments_.add(index, builderForValue.build());
@@ -1081,10 +499,10 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder addAllDepartments(
-        java.lang.Iterable<? extends com.progressoft.grpc.api.DepartmentRequest.Department> values) {
+        java.lang.Iterable<? extends com.progressoft.grpc.api.Department> values) {
       if (departmentsBuilder_ == null) {
         ensureDepartmentsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1096,7 +514,7 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder clearDepartments() {
       if (departmentsBuilder_ == null) {
@@ -1109,7 +527,7 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
     public Builder removeDepartments(int index) {
       if (departmentsBuilder_ == null) {
@@ -1122,16 +540,16 @@ public  final class DepartmentRequest extends
       return this;
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public com.progressoft.grpc.api.DepartmentRequest.Department.Builder getDepartmentsBuilder(
+    public com.progressoft.grpc.api.Department.Builder getDepartmentsBuilder(
         int index) {
       return getDepartmentsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder getDepartmentsOrBuilder(
+    public com.progressoft.grpc.api.DepartmentOrBuilder getDepartmentsOrBuilder(
         int index) {
       if (departmentsBuilder_ == null) {
         return departments_.get(index);  } else {
@@ -1139,9 +557,9 @@ public  final class DepartmentRequest extends
       }
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public java.util.List<? extends com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder> 
+    public java.util.List<? extends com.progressoft.grpc.api.DepartmentOrBuilder> 
          getDepartmentsOrBuilderList() {
       if (departmentsBuilder_ != null) {
         return departmentsBuilder_.getMessageOrBuilderList();
@@ -1150,33 +568,33 @@ public  final class DepartmentRequest extends
       }
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public com.progressoft.grpc.api.DepartmentRequest.Department.Builder addDepartmentsBuilder() {
+    public com.progressoft.grpc.api.Department.Builder addDepartmentsBuilder() {
       return getDepartmentsFieldBuilder().addBuilder(
-          com.progressoft.grpc.api.DepartmentRequest.Department.getDefaultInstance());
+          com.progressoft.grpc.api.Department.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public com.progressoft.grpc.api.DepartmentRequest.Department.Builder addDepartmentsBuilder(
+    public com.progressoft.grpc.api.Department.Builder addDepartmentsBuilder(
         int index) {
       return getDepartmentsFieldBuilder().addBuilder(
-          index, com.progressoft.grpc.api.DepartmentRequest.Department.getDefaultInstance());
+          index, com.progressoft.grpc.api.Department.getDefaultInstance());
     }
     /**
-     * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+     * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
      */
-    public java.util.List<com.progressoft.grpc.api.DepartmentRequest.Department.Builder> 
+    public java.util.List<com.progressoft.grpc.api.Department.Builder> 
          getDepartmentsBuilderList() {
       return getDepartmentsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        com.progressoft.grpc.api.DepartmentRequest.Department, com.progressoft.grpc.api.DepartmentRequest.Department.Builder, com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder> 
+        com.progressoft.grpc.api.Department, com.progressoft.grpc.api.Department.Builder, com.progressoft.grpc.api.DepartmentOrBuilder> 
         getDepartmentsFieldBuilder() {
       if (departmentsBuilder_ == null) {
         departmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            com.progressoft.grpc.api.DepartmentRequest.Department, com.progressoft.grpc.api.DepartmentRequest.Department.Builder, com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder>(
+            com.progressoft.grpc.api.Department, com.progressoft.grpc.api.Department.Builder, com.progressoft.grpc.api.DepartmentOrBuilder>(
                 departments_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),

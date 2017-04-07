@@ -13,13 +13,10 @@ public class GrpcServer {
 	public static void main(String[] args) {
 		Server server = ServerBuilder.forPort(8888)
 				.addService(DepartmentServiceGrpc.bindService(new DepartmentServiceImpl())).build();
-
 		try {
 			server.start();
 			server.awaitTermination();
-
 		} catch (InterruptedException | IOException e) {
-
 			e.printStackTrace();
 		}
 	}

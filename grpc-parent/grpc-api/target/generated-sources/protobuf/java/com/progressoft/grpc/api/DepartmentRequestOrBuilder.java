@@ -8,26 +8,26 @@ public interface DepartmentRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  java.util.List<com.progressoft.grpc.api.DepartmentRequest.Department> 
+  java.util.List<com.progressoft.grpc.api.Department> 
       getDepartmentsList();
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  com.progressoft.grpc.api.DepartmentRequest.Department getDepartments(int index);
+  com.progressoft.grpc.api.Department getDepartments(int index);
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
   int getDepartmentsCount();
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  java.util.List<? extends com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder> 
+  java.util.List<? extends com.progressoft.grpc.api.DepartmentOrBuilder> 
       getDepartmentsOrBuilderList();
   /**
-   * <code>repeated .com.progressoft.grpc.api.DepartmentRequest.Department departments = 1;</code>
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 1;</code>
    */
-  com.progressoft.grpc.api.DepartmentRequest.DepartmentOrBuilder getDepartmentsOrBuilder(
+  com.progressoft.grpc.api.DepartmentOrBuilder getDepartmentsOrBuilder(
       int index);
 }

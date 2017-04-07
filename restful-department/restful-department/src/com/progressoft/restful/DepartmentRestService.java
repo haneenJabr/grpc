@@ -17,12 +17,12 @@ import com.progressoft.jpa.entities.Department;
  */
 @Path("/department")
 public class DepartmentRestService {
-	
+
 	@POST
 	@Path("/post")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response postDepartment(List<Department> departments) {
-		return Response.status(201).build();
+		return Response.status(201).entity(departments).build();
 	}
 }

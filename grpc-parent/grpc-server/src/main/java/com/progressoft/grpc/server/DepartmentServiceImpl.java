@@ -16,9 +16,8 @@ public class DepartmentServiceImpl implements DepartmentServiceGrpc.DepartmentSe
 	@Override
 	public void departmentRequestHandler(DepartmentRequest request, StreamObserver<DepartmentReply> responseObserver) {
 		try {
-
-			DepartmentReply reply = DepartmentReply.newBuilder().setMessage("completed successfully from server")
-					.build();
+			DepartmentReply reply = DepartmentReply.newBuilder().addAllDepartments(request.getDepartmentsList())
+					.setMessage("completed successfully from server").build();
 			responseObserver.onNext(reply);
 			responseObserver.onCompleted();
 		} catch (Exception e) {

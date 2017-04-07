@@ -16,4 +16,28 @@ public interface DepartmentReplyOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMessageBytes();
+
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  java.util.List<com.progressoft.grpc.api.Department> 
+      getDepartmentsList();
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  com.progressoft.grpc.api.Department getDepartments(int index);
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  int getDepartmentsCount();
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  java.util.List<? extends com.progressoft.grpc.api.DepartmentOrBuilder> 
+      getDepartmentsOrBuilderList();
+  /**
+   * <code>repeated .com.progressoft.grpc.api.Department departments = 2;</code>
+   */
+  com.progressoft.grpc.api.DepartmentOrBuilder getDepartmentsOrBuilder(
+      int index);
 }
